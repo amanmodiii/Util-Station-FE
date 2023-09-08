@@ -277,8 +277,14 @@ textarea:focus {
   .utility-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  html {
+    font-size: 75%;
+  }
+  input, textarea {
+    width: 85vw;
+  }
   .card {
-    width: 88vw;
+    max-width: 88vw;
     margin: auto;
   }
 }
