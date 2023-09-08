@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { TailSpin } from "react-loader-spinner";
 import html2canvas from "html2canvas";
+import { BASE_URL } from "../../services/port";
 
 function Qrgenerator() {
   const [prompt, setPrompt] = useState("");
@@ -15,7 +16,7 @@ function Qrgenerator() {
     setLoading(true);
 
     axios
-      .post("http://localhost:3001/generateQR", { prompt })
+      .post(`${BASE_URL}/generateQR`, { prompt })
       .then((res) => {
         setLoading(false);
         setResp(res.data);

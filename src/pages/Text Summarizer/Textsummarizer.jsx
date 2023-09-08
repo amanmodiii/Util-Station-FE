@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Rings } from "react-loader-spinner";
+import { BASE_URL } from "../../services/port";
 
 function Textsummarizer() {
   const [prompt, setPrompt] = useState("");
@@ -15,7 +16,7 @@ function Textsummarizer() {
     setLoading(true);
 
     axios
-      .post("http://localhost:3001/summarize", { prompt })
+      .post(`${BASE_URL}/summarize`, { prompt })
       .then((res) => {
         setLoading(false);
         setResp(res.data);

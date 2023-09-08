@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { TailSpin } from "react-loader-spinner";
+import { BASE_URL } from "../../services/port";
 
 function Urlshortner() {
   const [prompt, setPrompt] = useState("");
@@ -14,7 +15,7 @@ function Urlshortner() {
     setLoading(true);
 
     axios
-      .post("http://localhost:3001/shortenURL", { prompt })
+      .post(`${BASE_URL}/shortenURL`, { prompt })
       .then((res) => {
         setLoading(false);
         setResp(res.data);

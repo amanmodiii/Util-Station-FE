@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { TailSpin } from "react-loader-spinner";
+import { BASE_URL } from "../../services/port";
 
 function Askmeanything() {
   const [prompt, setPrompt] = useState("");
@@ -14,7 +15,7 @@ function Askmeanything() {
     setLoading(true);
 
     axios
-      .post("http://localhost:3001/chat", { prompt })
+      .post(`${BASE_URL}/chat`, { prompt })
       .then((res) => {
         setLoading(false);
         setResp(res.data);
