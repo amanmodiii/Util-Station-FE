@@ -45,7 +45,7 @@ function Headlinegenerator() {
           />
         )}
       </div>
-      <div className="response">{resp}</div>
+      <div className="response"><h2>{resp}</h2></div>
       <form>
         <textarea
           type="text"

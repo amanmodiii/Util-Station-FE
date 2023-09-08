@@ -225,8 +225,10 @@ textarea:focus {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-weight: 700;
   font-family: 'Karla', sans-serif;
+}
+.response>h2 {
+  font-weight: 700;
   font-size: 2.5rem;
 }
 
@@ -282,6 +284,9 @@ textarea:focus {
   }
   input, textarea {
     width: 85vw;
+  }
+  .response{
+      flex-direction: column;
   }
   .card {
     max-width: 88vw;
